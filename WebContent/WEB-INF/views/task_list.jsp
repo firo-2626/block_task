@@ -8,13 +8,11 @@
     </head>
     <body>
        <div class="top-contents">
-           <a class="block_logo" href="#">
-               <img src="../image/block.jpg" alt="ロゴ" width="25" height="25">
-           </a>
-           <h1 class="l task_title">BLOCK TASK一覧</h1></div>
+           <a class="l task_title" href="#">BLOCK TASK 一覧</a>
            <div class="sort">
-               <label class="sort">ソート一覧</label>
+               <label class="sort">ソート</label>
                <input type="text">
+           </div>
            </div>
        <div class="contents">
 
