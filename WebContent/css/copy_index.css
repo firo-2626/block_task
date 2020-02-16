@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+
+
+.l {
+    float:left;
+}
+
+.contents {
+    margin-top: 20px;
+}
+
+.block ul {
+    margin-top: 20px;
+}
+
+.card {
+    border: 2px solid #dee7ec;
+    width: 80%;
+}
+
+.ct {
+    margin-top: 20px;
+}
+
+.t-btn {
+    margin-left: 20px;
+}
+
+.te {
+    margin-left: 20px;
+}
+
+.mt {
+    margin-top: 40px;
+}
+
+.mt10 {
+    margin-top:10px;
+}
+
+.sort {
+    margin-left:30%;
+    padding-top:5px;
+    font-size:22px;
+    font-family:"Yu Gothic UI";
+    color:white;
+}

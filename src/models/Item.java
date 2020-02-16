@@ -1,6 +1,7 @@
 package models;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,15 +16,15 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery( // 全てのTask項目を取得
             name = "getAllItems",
-            query = "SELECT a FROM Item AS a ORDER BY a.id DESC"
+            query = "SELECT i FROM Item AS i ORDER BY i.id DESC"
             ),
     @NamedQuery( // Task項目の全件数を取得
             name = "getItemsCount",
-            query = "SELECT COUNT(a) FROM Item AS a"
+            query = "SELECT COUNT(i) FROM Item AS i"
             ),
     @NamedQuery( // 同名のTaskがデータベースに存在しているかチェック
             name = "checkRegisterdTask",
-            query = "SELECT COUNT(a) FROM Item AS a WHERE a.task = :task"
+            query = "SELECT COUNT(i) FROM Item AS i WHERE i.task = :task"
             )
 })
 @Entity
@@ -53,7 +54,7 @@ public class Item {
 
     // period　日付型
     @Column(name = "period")
-    private Timestamp period;
+    private Date period;
 
     // content 備考欄
     @Column(name = "content")
@@ -111,7 +112,7 @@ public class Item {
         this.importance = importance;
     }
 
-    public Timestamp getPeriod() {
+    public Date getPeriod() {
         return period;
     }
 

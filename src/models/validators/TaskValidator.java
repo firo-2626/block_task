@@ -11,11 +11,11 @@ import models.Item;
 // Task名の入力確認 , Taskの重複チェック
 public class TaskValidator {
     //エラーリストの取得
-    public static List<String> validate(Item a, Boolean task_duplicate_check_flag) {
+    public static List<String> validate(Item i, Boolean task_duplicate_check_flag) {
         List<String> errors = new ArrayList<String>();
 
      // Taskのエラーチェック
-        String task_error = _validateTask(a.getTask(), task_duplicate_check_flag);
+        String task_error = _validateTask(i.getTask(), task_duplicate_check_flag);
         if(!task_error.equals("")) {
             errors.add(task_error);
         }

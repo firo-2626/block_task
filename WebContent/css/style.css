@@ -1,90 +1,8 @@
 @CHARSET "UTF-8";
 
-
-.title_image {
-    background-image:url(../image/素材.jpg);
-    background-size:cover;
-    height:500px;
-    text-align:center;
-    padding-top: 180px;
-}
-
-.title {
-    color: yellow;
-    font-size: 100px;
-    font-family: Impact;
-}
-
-
-.btn a {
-    padding: 18px 40px;
-    display:inline-block;
-    margin-top:20px;
-    opacity: 0.8;
-}
-
-.btn a:hover {
-    opacity:1;
-}
-
-.t1 {
-    background-color:#808000;
-    color: yellow;
-}
-
-.t2 {
-    background-color:#808000;
-    color: yellow;
-    margin-left:30px;
-}
-
-.t3 {
-    background-color:#808000;
-    color: yellow;
-    margin-left:30px;
-}
-
-
-.top-contents {
+#header {
     background-image:url(../image/block.jpg);
     height:50px;
-}
-
-.l {
-    float:left;
-}
-
-.contents {
-    margin-top: 20px;
-}
-
-.block ul {
-    margin-top: 20px;
-}
-
-.card {
-    border: 2px solid #dee7ec;
-    width: 80%;
-}
-
-.ct {
-    margin-top: 20px;
-}
-
-.t-btn {
-    margin-left: 20px;
-}
-
-.te {
-    margin-left: 20px;
-}
-
-.mt {
-    margin-top: 40px;
-}
-
-.mt10 {
-    margin-top:10px;
 }
 
 .task_title {
@@ -94,10 +12,8 @@
     color:yellow;
 }
 
-.sort {
-    margin-left:30%;
-    padding-top:5px;
-    font-size:22px;
-    font-family:"Yu Gothic UI";
-    color:white;
+body {
+    background-image:url(../image/back.gif);
+    height:100%;
+    color: black;
 }
