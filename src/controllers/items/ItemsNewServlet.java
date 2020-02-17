@@ -2,11 +2,14 @@ package controllers.items;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import models.Item;
 
 /**
  * Servlet implementation class ItemsNewServlet
@@ -27,8 +30,10 @@ public class ItemsNewServlet extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
-        response.getWriter().append("Served at: ").append(request.getContextPath());
+        request.setAttribute("item", new Item());
+
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/items/new.jsp");
+        rd.forward(request, response);
     }
 
 }
