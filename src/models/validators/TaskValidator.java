@@ -3,9 +3,6 @@ package models.validators;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
-
-import DBUtill.DBUtil;
 import models.Item;
 
 // Task名の入力確認 , Taskの重複チェック
@@ -31,18 +28,20 @@ public class TaskValidator {
             return "Task名を追加してください!!";
         }
 
-        // ダブった場合　情報を出力
-        if(task_duplicate_check_flag) {
-            EntityManager em = DBUtil.createEntityManager();
-            long items_count = (long)em.createNamedQuery("checkRegisteredTask, Long.class")
-                    .setParameter("task", task)
-                    .getSingleResult();
+        // *ダブりチェックにてエラーが発生* 一旦省く
 
-            em.close();
-            if(items_count > 0) {
-                return "そのTask名は、既に存在しております。";
-            }
-        }
+        // ダブった場合　情報を出力
+        // if(task_duplicate_check_flag) {
+        //     EntityManager em = DBUtil.createEntityManager();
+        //     String items_count = (String)em.createNamedQuery("checkRegisteredTask, String.class")
+        //             .setParameter("task", task)
+        //             .getSingleResult();
+        //
+        //     em.close();
+        //     if(items_count.equals("task_error")) {
+        //         return "そのTask名は、既に存在しております。";
+        //     }
+        // }
 
         return "";
     }

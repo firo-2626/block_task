@@ -1,13 +1,18 @@
 @CHARSET "UTF-8";
 
+.all {
+    margin-left: 10px;
+}
+
 .header2 {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    margin-top : 20px;
 }
 
 .header2 h2 {
     float:left;
     font-family: "arial black";
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .header2 a {
@@ -24,4 +29,36 @@
 .fl {
     float: left;
     margin-left: 20px;
+}
+
+.card {
+    border: 2px solid #dee7ec;
+    width: 100;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.btn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+.cb {
+    clear: both;
+}
+
+#pagination {
+    text-align: center;
+    margin-top: 30px;
 }

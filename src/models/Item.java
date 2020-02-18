@@ -23,7 +23,7 @@ import javax.persistence.Table;
             query = "SELECT COUNT(i) FROM Item AS i"
             ),
     @NamedQuery( // 同名のTaskがデータベースに存在しているかチェック
-            name = "checkRegisterdTask",
+            name = "checkRegisteredTask",
             query = "SELECT COUNT(i) FROM Item AS i WHERE i.task = :task"
             )
 })
