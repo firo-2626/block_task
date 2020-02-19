@@ -33,6 +33,11 @@
 
                     <c:forEach var="item" items="${items}" varStatus="status">
                         <div class="fl">
+                            <div class="btn">
+                                <input class="l" type="submit" value="Task完了">
+                                </bk>
+                                <a href="<c:url value='/items/edit?id=${item.id}' />">TASK 編集</a>
+                            </div>
                             <div class="card">
                             <label>期限:</label>
                             <c:choose>
@@ -85,11 +90,6 @@
                                     <div class="blue"><c:out value="${item.content}" /></div>
                                 </c:otherwise>
                             </c:choose>
-                            </div>
-                            <div class="btn">
-                                <input class="l" type="submit" value="Task完了">
-                                </bk>
-                                <input class="te" type="submit" value="Task編集">
                             </div>
                         </div>
                     </c:forEach>

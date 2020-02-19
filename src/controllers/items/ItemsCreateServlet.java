@@ -41,12 +41,13 @@ public class ItemsCreateServlet extends HttpServlet {
 
         Item i = new Item();
 
-        // i.setPeriod(request.getParameter(period));
+        // i.setPeriod(Integer.parseInt(request.getParameter("period")));
         i.setImportance(Integer.parseInt(request.getParameter("importance")));
         i.setTask(request.getParameter("task"));
         i.setAction(request.getParameter("action"));
         i.setItem(request.getParameter("item"));
         i.setContent(request.getParameter("content"));
+
 
         Timestamp currentTime = new Timestamp(System.currentTimeMillis());
         i.setCreated_at(currentTime);
