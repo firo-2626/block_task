@@ -12,7 +12,7 @@
     <body>
         <div id="wrapper">
             <div id="header">
-                <a class="task_title" href="#">BLOCK TASK</a>
+                <a class="task_title" href="<c:url value='/home.html'/>">BLOCK TASK</a>
                 </br>
             </div>
             <div id="content">

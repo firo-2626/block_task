@@ -116,7 +116,7 @@ public class Item {
         return period;
     }
 
-    public void setPeriod(Timestamp period) {
+    public void setPeriod(Date period) {
         this.period = period;
     }
 

@@ -2,6 +2,14 @@ package controllers.items;
 
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -41,7 +49,21 @@ public class ItemsCreateServlet extends HttpServlet {
 
         Item i = new Item();
 
-        // i.setPeriod(Integer.parseInt(request.getParameter("period")));
+        // LocalDateTImeをStringにて date変数を生成
+        LocalDateTime date = LocalDate.parse(request.getParameter("period"),
+                DateTimeFormatter.ofPattern("uuuu-MM-dd"))
+            .atTime(LocalTime.MIN);
+
+        // LocalDateTime ⇒　instantへ変換
+        Instant instant = date.toInstant(ZoneOffset.UTC);
+
+        // instant ⇒　Date型へ変換
+        Date date2 = Date.from(instant);
+
+
+        i.setPeriod(date2);
+
+
         i.setImportance(Integer.parseInt(request.getParameter("importance")));
         i.setTask(request.getParameter("task"));
         i.setAction(request.getParameter("action"));
@@ -72,6 +94,11 @@ public class ItemsCreateServlet extends HttpServlet {
 
             response.sendRedirect(request.getContextPath() + "/items/index");
         }
+    }
+
+    private OffsetDateTime OffsetDateTime(LocalDateTime date) {
+        // TODO 自動生成されたメソッド・スタブ
+        return null;
     }
 
 }

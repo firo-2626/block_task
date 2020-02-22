@@ -2,9 +2,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="/WEB-INF/views/layout/app.jsp">
     <c:param name="content">
-                <h2> ${item.task} の編集</h2>
+                <h2> id : ${item.id}の${item.task} の編集</h2>
                 <form method="POST" action="<c:url value='/items/update' />">
                     <c:import url="_form.jsp" />
+                    <input type="hidden" name="id" value="${item.id}" />
+                    <button type="submit">編集</button>
                 </form>
 
                 <p><a href="#" onclick="confirmDestroy();">タスク　削除</a></p>

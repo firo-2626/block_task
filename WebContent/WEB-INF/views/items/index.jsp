@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <c:import url="../layout/app.jsp">
     <c:param name="head">
         <link rel="stylesheet" href="<c:url value='/css/index.css' />">
@@ -45,7 +45,7 @@
                                     ------
                                 </c:when>
                                 <c:otherwise>
-                                    <div class="red"></div><c:out value="${item.period}" /></div>
+                                    <div class="red"><fmt:formatDate value="${item.period}" pattern="yyyy/MM/dd" /></div>
                                 </c:otherwise>
                             </c:choose>
                             <label>重要度:</label>
@@ -105,8 +105,7 @@
                             <c:out value="${i}" />&nbsp;
                     </c:when>
                         <c:otherwise>
-                            <a href="<c:url value='/items/index?page=${i}' />"><c:out
-                                    value="${i}" /></a>&nbsp;
+                            <a href="<c:url value='/items/index?page=${i}' />"><c:out value="${i}" /></a>&nbsp;
                     </c:otherwise>
                     </c:choose>
                 </c:forEach>

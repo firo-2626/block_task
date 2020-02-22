@@ -40,6 +40,8 @@ public class ItemsEditServlet extends HttpServlet {
 
         request.setAttribute("item", i);
 
+        request.getSession().setAttribute("task_id", i.getId());
+
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/items/edit.jsp");
         rd.forward(request, response);
     }

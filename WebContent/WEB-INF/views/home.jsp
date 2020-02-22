@@ -16,8 +16,8 @@
 
             <!-- リンク先ボタン横並び -->
             <div class="btn">
-                <a class="t1" href="#">TASK 一覧</a>
-                <a class="t2" href="#">TASK 登録</a>
+                <a class="t1" href="<c:url value='/items/index' />">TASK 一覧</a>
+                <a class="t2" href="<c:url value='/items/new' />">TASK 登録</a>
                 <a class="t3" href="#">TASK LIST</a>
             </div>
         </div>
