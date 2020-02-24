@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<head>
+     <link rel="stylesheet" href="<c:url value='/css/_form.css' />">
+</head>
+
 <c:if test="${errors != null}">
     <div id="flush_error">
         入力内容にエラーがあります。<br />
@@ -15,7 +19,7 @@
 <label for="task">タスク</label><br />
 <input type="text" name="task" value="${item.task}" />
 
-<label for="importance">重要度</label><br />
+<label class="section" for="importance">重要度</label><br />
 <input type="text" name="importance" value="${item.importance}" />
 </div>
 <br /><br />
@@ -24,7 +28,7 @@
 <label for="action">行動</label><br />
 <input type="text" name="action" value="${item.action}" />
 
-<label for="period">期限</label><br />
+<label class="section2" for="period">期限</label><br />
 <input type="date" name="period" value="${item.period}" />
 </div>
 <br /><br />
@@ -33,7 +37,7 @@
 <label for="item">必要</label><br />
 <input type="text" name="item" value="${item.item}" />
 
-<label for="content">備考・メモ</label><br />
+<label class="section" for="content">備考・メモ</label><br />
 <input type="text" name="content" value="${item.content}" />
 </div>
 <br /><br />

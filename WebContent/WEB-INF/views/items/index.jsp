@@ -14,32 +14,42 @@
         <div class="all">
             <div class="header2">
                 <h2>BLOCK TASK 一覧</h2>
-                <div class="sort">
-                    <label class="sort">ソート : </label>
-                </div>
-                <div class="t-btn mt10">
-                    <input class="fl" type="submit" value="タイトル">
-                    </bk>
-                    <input class="fl" type="submit" value="期限">
-                    </bk>
-                    <input class="mal20 fl" type="submit" value="重要度">
-                    </bk>
-                </div>
+                <div class="register">
                 <p>
                     <a href="<c:url value='/items/new' />">TASK 登録</a>
                 </p>
+                </div>
+                <div class="list">
+                <p>
+                 <a  href="<c:url value='/items/show' />">TASK LIST</a>
+                </p>
+                </div>
             </div>
             <div class="contents">
 
                     <c:forEach var="item" items="${items}" varStatus="status">
                         <div class="fl">
                             <div class="btn">
-                                <input class="l" type="submit" value="Task完了">
-                                </bk>
-                                <a href="<c:url value='/items/edit?id=${item.id}' />">TASK 編集</a>
+                                <p>
+                <a class="l del" href="#" onclick="confirmDestroy();">タスク 完了</a>
+            </p>
+            <form method="POST" action="<c:url value='/items/destroy' />">
+                <input type="hidden" name="id" value="${item.id}" />
+            </form>
+            <script>
+                function confirmDestroy() {
+                    if (confirm("本当に削除してよろしいですか？")) {
+                        document.forms[1].submit();
+                    }
+                }
+            </script>
+                                <div class="edit">
+                                <a class="edit2" href="<c:url value='/items/edit?id=${item.id}' />">TASK 編集</a>
+                                </div>
                             </div>
                             <div class="card">
-                            <label>期限:</label>
+                            <label class="l">期限:</label>
+                            <div class="l">
                             <c:choose>
                                 <c:when test="${empty item.period}">
                                     ------
@@ -48,7 +58,8 @@
                                     <div class="red"><fmt:formatDate value="${item.period}" pattern="yyyy/MM/dd" /></div>
                                 </c:otherwise>
                             </c:choose>
-                            <label>重要度:</label>
+                            </div>
+                            <label class="importance">重要度:</label>
                             <c:choose>
                                 <c:when test="${empty item.importance}">
                                     --

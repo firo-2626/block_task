@@ -18,7 +18,7 @@
             <div class="btn">
                 <a class="t1" href="<c:url value='/items/index' />">TASK 一覧</a>
                 <a class="t2" href="<c:url value='/items/new' />">TASK 登録</a>
-                <a class="t3" href="#">TASK LIST</a>
+                <a class="t3" href="<c:url value='/items/show' />">TASK LIST</a>
             </div>
         </div>
     </div>

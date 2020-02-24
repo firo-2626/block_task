@@ -74,7 +74,6 @@ public class ItemsCreateServlet extends HttpServlet {
         Timestamp currentTime = new Timestamp(System.currentTimeMillis());
         i.setCreated_at(currentTime);
         i.setUpdated_at(currentTime);
-        i.setDelete_flag(0);
 
         List<String> errors = TaskValidator.validate(i, true);
         if(errors.size() > 0) {

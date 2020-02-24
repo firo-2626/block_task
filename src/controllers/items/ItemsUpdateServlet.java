@@ -65,7 +65,6 @@ public class ItemsUpdateServlet extends HttpServlet {
         i.setItem(request.getParameter("item"));
         i.setContent(request.getParameter("content"));
         i.setUpdated_at(new Timestamp(System.currentTimeMillis()));
-        i.setDelete_flag(0);
 
         em.getTransaction().begin();
         em.getTransaction().commit();

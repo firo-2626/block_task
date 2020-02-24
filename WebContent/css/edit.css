@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+
+.all {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.target {
+    margin-bottom: 20px;
+    color: #33CCFF;
+
+}
+
+.edit_btn {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.edit {
+    padding: 9px 20px;
+}
+
+.btn {
+    padding: 9px 20px;
+    opacity: 0.4;
+    margin-left: 30px;
+    display:inline-block;
+}
+
+.btn:hover {
+    opacity: 0.6;
+}
+
+.del {
+    background-color:#FFCCFF;
+}
+
+.index {
+    background-color: olive;
+    color: yellow;
+}
+
+.fl {
+    float:left;
+}

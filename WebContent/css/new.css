@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+.all {
+    margin-left: 20px;
+}
+
+h2 {
+    font-family: "arial black";
+    font-size: 30px;
+}
+
+.form {
+    margin-top:30px;
+}
+
+.btn {
+    float:left;
+    padding: 7px 20px;
+}
+
+.link {
+    margin-left:40px;
+    padding: 7px 20px;
+    display:inline-block;
+    opacity: 0.4;
+    background-color: olive;
+    color: yellow;
+}
+
+.link:hover {
+    opacity: 0.8;
+}

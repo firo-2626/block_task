@@ -68,10 +68,6 @@ public class Item {
     @Column(name = "updated_at", nullable = false)
     private Timestamp updated_at;
 
-    // 論理削除
-    @Column(name = "delete_flag", nullable = false)
-    private Integer delete_flag;
-
     public Integer getId() {
         return id;
     }
@@ -142,14 +138,6 @@ public class Item {
 
     public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
-    }
-
-    public Integer getDelete_flag() {
-        return delete_flag;
-    }
-
-    public void setDelete_flag(Integer delete_flag) {
-        this.delete_flag = delete_flag;
     }
 
 }
